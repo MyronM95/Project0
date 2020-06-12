@@ -1,41 +1,51 @@
 package com.revature.services;
 
 
-import java.io.FileInputStream;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.Properties;
+import java.sql.SQLException;
+
 
 public class ConnectionService {
-
+    private  static  ConnectionService connectionService_single_instance = null;
     private Connection connection;
 
-    public ConnectionService() {
-        try  {
-            FileInputStream fis = new FileInputStream("connection.prop");
-            Properties p = new Properties();
-            p.load(fis);
+    public ConnectionService(){
 
-            connection = DriverManager.getConnection(p.getProperty("hostname"),
-                    p.getProperty("username"), p.getProperty("password"));
-
-        } catch (Exception e) {
-            System.out.println("Exception: " + e.getMessage());
+        try{
+            connection = DriverManager.getConnection("jdbc:postgresql://ruby.db.elephantsql.com:5432/hvguntos/", "hvguntos", "zKlU_lOGWFeddXsR1xo--OT3Kk-4Pw6b" );
+            System.out.println("Successful Connection to Database!");
+        }catch (SQLException e){
+            System.out.println("Could not connect to Database!");
             e.printStackTrace();
         }
+
+
     }
 
     public Connection getConnection() {
         return connection;
     }
 
-    @Override
-    public void finalize() {
-        try {
-            connection.close();
-        } catch(Exception e) {
+    public static ConnectionService getInstance(){
 
+        if( connectionService_single_instance == null) {
+            System.out.println("Connection Established");
+            connectionService_single_instance = new ConnectionService();
         }
+
+        return connectionService_single_instance;
     }
 
+
+    @Override
+    protected void finalize() throws Throwable {
+        try{
+            connection.close();
+        }catch (Exception e){
+
+        }
+        super.finalize();
+    }
 }
