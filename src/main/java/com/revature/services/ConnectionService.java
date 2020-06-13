@@ -14,7 +14,7 @@ public class ConnectionService {
     public ConnectionService(){
 
         try{
-            connection = DriverManager.getConnection("jdbc:postgresql://ruby.db.elephantsql.com:5432/hvguntos/", "hvguntos", "zKlU_lOGWFeddXsR1xo--OT3Kk-4Pw6b" );
+            connection = DriverManager.getConnection("jdbc:postgresql://ruby.db.elephantsql.com:5432/hvguntos?ssl=true/", "hvguntos", "zKlU_lOGWFeddXsR1xo--OT3Kk-4Pw6b" );
             System.out.println("Successful Connection to Database!");
         }catch (SQLException e){
             System.out.println("Could not connect to Database!");

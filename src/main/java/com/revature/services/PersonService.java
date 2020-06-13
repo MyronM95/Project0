@@ -31,7 +31,9 @@ public class PersonService {
 //                createNewPerson();
             }else{
                 try {
+
                     final Person newPerson = new Person(name, userName, password);
+                    checkForPerson(newPerson.getName(), newPerson.getUsername());
                     System.out.println("Creating User");
                     //Note that there's a thread constructor that takes in a runnable
                     // Note that Runnable is a functional interface, it has one and only one method run()
@@ -56,5 +58,17 @@ public class PersonService {
         for(Person person: retrievedPersons) {
             System.out.println(person);
         }
+    }
+
+    public Person checkForPerson(String userName, String name) {
+        ArrayList<Person> array = (ArrayList<Person>) repo.getAllUsers();
+        for (Person person: array) {
+            if(person.getUsername().equals(userName) && person.getName().equals(name)) {
+                return person;
+            } else{
+
+            }
+        }
+        return null;
     }
 }

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonRepoFile implements IPersonRepo{
-    private String filepath = "C:\\Users\\Myron.000\\IdeaProjects\\trainer-code\\Week1Java\\TourOfHeros\\Project0\\src\\main\\java\\com\\revature\\resources\\Person.txt";
+    private String filepath = "C:\\Users\\myron\\IdeaProjects\\Project0\\src\\main\\java\\com\\revature\\resources\\Person.txt";
 
     @Override
     public synchronized Person addPerson(Person person) {

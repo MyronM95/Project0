@@ -1,6 +1,7 @@
 package com.revature.menus;
 
 import com.revature.dao.PersonRepoFile;
+import com.revature.services.LoginService;
 import com.revature.services.PersonService;
 
 import java.util.Scanner;
@@ -24,6 +25,8 @@ public class MainMenu {
             switch (userInput) {
                 case "1":
                     //login menu
+                    LoginService loginService = new LoginService();
+                    loginService.LoginService();
                     break;
                 case "2":
                     service.createNewPerson();
@@ -36,5 +39,6 @@ public class MainMenu {
 
             }
         } while(!userInput.equals("2"));
+        input.close();
     }
 }
