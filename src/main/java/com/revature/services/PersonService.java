@@ -4,12 +4,18 @@ import com.revature.dao.IPersonRepo;
 import com.revature.exceptions.InvalidUsernameException;
 import com.revature.models.Person;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PersonService {
     ValidationService inputValidation = new ValidationService();
     IPersonRepo repo;
+    ConnectionService connectionService = ConnectionService.getInstance();
+
+
 
     public PersonService(IPersonRepo repo) {
         this.repo = repo;
@@ -28,25 +34,33 @@ public class PersonService {
 
             if (!password.equals(reenterPassword)){
                 System.out.println("Please make sure the password is the same.");
-//                createNewPerson();
+                createNewPerson();
             }else{
                 try {
 
-                    final Person newPerson = new Person(name, userName, password);
-                    checkForPerson(newPerson.getName(), newPerson.getUsername());
+//                    final Person newPerson = new Person(name, userName, password);
+//                    checkForPerson(newPerson.getName(), newPerson.getUsername());
                     System.out.println("Creating User");
-                    //Note that there's a thread constructor that takes in a runnable
-                    // Note that Runnable is a functional interface, it has one and only one method run()
-                    // lambda expressions are used to represent a method interface
-                    // we're using a lambda expression to represent a runnable
-                    Thread addPersonThread = new Thread(() -> {
-                        repo.addPerson(newPerson);
-                        System.out.println("New User Added!");
-                    });
-                    addPersonThread.start();
-                    success = true;
-                } catch (InvalidUsernameException e) {
-                    System.out.println("Invalid username, please try another one!");
+                    PreparedStatement ps = connectionService.getConnection().prepareStatement("insert into users (username, userpassword, name, is_admin) values (?,?,?,?)");
+                    ps.setString(1, userName);
+                    ps.setString(2,password);
+                    ps.setString(3,name);
+                    ps.setBoolean(4,false);
+                    System.out.println("New User Added!");
+////Note that there's a thread constructor that takes in a runnable
+//// Note that Runnable is a functional interface, it has one and only one method run()
+//// lambda expressions are used to represent a method interface
+//// we're using a lambda expression to represent a runnable
+//                    Thread addPersonThread = new Thread(() -> {
+//                        repo.addPerson(newPerson);
+//                        System.out.println("New User Added!");
+//                    });
+//                    addPersonThread.start();
+//                    success = true;
+//                    System.exit(0);
+                } catch (SQLException e) {
+                    System.out.println("Error: " + e.getMessage());
+
                 }
             }
         } while (!success);
@@ -60,15 +74,15 @@ public class PersonService {
         }
     }
 
-    public Person checkForPerson(String userName, String name) {
-        ArrayList<Person> array = (ArrayList<Person>) repo.getAllUsers();
-        for (Person person: array) {
-            if(person.getUsername().equals(userName) && person.getName().equals(name)) {
-                return person;
-            } else{
-
-            }
-        }
-        return null;
-    }
+//    public Person checkForPerson(String userName, String name) {
+//        ArrayList<Person> array = (ArrayList<Person>) repo.getAllUsers();
+//        for (Person person: array) {
+//            if(person.getUsername().equals(userName) && person.getName().equals(name)) {
+//                return person;
+//            } else{
+//
+//            }
+//        }
+//        return null;
+//    }
 }

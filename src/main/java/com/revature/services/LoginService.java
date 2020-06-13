@@ -3,6 +3,7 @@ package com.revature.services;
 import com.revature.dao.IPersonRepo;
 import com.revature.dao.PersonRepoFile;
 import com.revature.menus.AdminMenu;
+import com.revature.menus.MainMenu;
 import com.revature.menus.UserMenu;
 import com.revature.models.Person;
 
@@ -54,6 +55,8 @@ public class LoginService {
                 }
             } else{
                 System.out.println("Username not found");
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.start();
             }
 
         }catch (Exception e){

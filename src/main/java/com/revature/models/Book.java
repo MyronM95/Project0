@@ -4,12 +4,15 @@ public class Book {
 
     private String bookName;
     private String isbn;
-    private String author;
+    private int author_id;
 
-    public Book(String bookName, String isbn, String author) {
+    public Book(String bookName, String isbn, int author_id) {
         this.bookName = bookName;
         this.isbn = isbn;
-        this.author = author;
+        this.author_id = author_id;
+    }
+
+    public Book(String book_name, String isbn) {
     }
 
     public String getBookName() {
@@ -28,11 +31,20 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public String getAuthor() {
-        return author;
+    public int getAuthorId() {
+        return author_id;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthor(int author_id) {
+        this.author_id = author_id;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookName='" + bookName + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", author_id='" + author_id + '\'' +
+                '}';
     }
 }

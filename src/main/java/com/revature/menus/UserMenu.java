@@ -1,5 +1,7 @@
 package com.revature.menus;
 
+import com.revature.dao.BookDAOOnlineImpl;
+
 import java.util.Scanner;
 
 public class UserMenu extends MainMenu{
@@ -22,6 +24,8 @@ public class UserMenu extends MainMenu{
         switch (userInput) {
             case "1":
                 //books menu
+                BookDAOOnlineImpl bookDAOOnline = new BookDAOOnlineImpl();
+                bookDAOOnline.getAllBooks();
                 break;
             case "2":
                //authors list
