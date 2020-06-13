@@ -2,8 +2,10 @@ package com.revature.services;
 
 import com.revature.dao.IPersonRepo;
 import com.revature.dao.PersonRepoFile;
+import com.revature.menus.AdminMenu;
 import com.revature.menus.UserMenu;
 import com.revature.models.Person;
+
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,7 +24,7 @@ public class LoginService {
     public void LoginService(){
         String userNameDB;
         String passwordDB;
-        String is_admin;
+        Boolean is_admin;
         try{
             System.out.print("Username: ");
             String userName = input.next();
@@ -38,15 +40,15 @@ public class LoginService {
 
                 userNameDB = rs.getString(2);
                 passwordDB = rs.getString(3);
-                is_admin = rs.getString(5);
+                is_admin = rs.getBoolean(5);
 
 
                 if(userName.equalsIgnoreCase(userNameDB)&& userPassword.equals(passwordDB)){
 
-//                    if(is_admin == "true"){
-//                        AdminMenu adminMenu = new AdminMenu();
-//                        adminMenu.start();
-//                    }else{}
+                    if(is_admin){
+                        AdminMenu adminMenu = new AdminMenu();
+                        adminMenu.start();
+                    }else{}
                     UserMenu userMenu = new UserMenu();
                     userMenu.start();
                 }
