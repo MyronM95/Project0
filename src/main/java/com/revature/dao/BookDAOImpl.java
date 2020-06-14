@@ -67,6 +67,37 @@ public class BookDAOImpl implements BookDAO {
         return null;
     }
 
+    public ArrayList<Book> getMyBooks() {
+
+
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream((new FileInputStream(filePath)));
+            ArrayList<Book> arrayBookList = (ArrayList<Book>) objectInputStream.readObject();
+            System.out.println("Got Array List");
+            objectInputStream.close();
+
+            System.out.println("Currently are: " + bookArrayList.size() + " Books.");
+            for (Book book : bookArrayList) {
+
+                System.out.println(book.ratingString());
+            }
+
+            return bookArrayList;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("IOException");
+
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("Class Not found");
+        }
+
+
+        return null;
+    }
+
 
     @Override
     public boolean addNewBook(Book book) {

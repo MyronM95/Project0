@@ -14,9 +14,8 @@ public class UserMenu extends MainMenu{
         System.out.println("Please choose from the following options");
         System.out.println("[1] Rate a book");
         System.out.println("[2] See authors");
-        System.out.println("[3] See my books");
-        System.out.println("[4] See users");
-        System.out.println("[5] Exit application");
+        System.out.println("[3] Search users' profiles (including your own)");
+        System.out.println("[4] Exit application");
 
         //switch for user input to point them to appropriate places in the code
 
@@ -30,13 +29,13 @@ public class UserMenu extends MainMenu{
             case "2":
                //authors list
                 break;
+
             case "3":
-                //myBooks menu
+                //users list including the user's
+                BookDAOOnlineImpl bookDAOOnline2 = new BookDAOOnlineImpl();
+                bookDAOOnline2.getMyBooks();
                 break;
             case "4":
-                //users list
-                break;
-            case "5":
                 System.out.println("Exiting....");
                 System.exit(0);
                 break;
@@ -44,7 +43,7 @@ public class UserMenu extends MainMenu{
                 System.out.println("Invalid input please try again!");
 
         }
-    } while(!userInput.equals("5"));
+    } while(!userInput.equals("4"));
     input.close();
     }
 }

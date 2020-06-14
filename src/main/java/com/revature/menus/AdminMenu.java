@@ -1,13 +1,17 @@
 package com.revature.menus;
 
-import com.revature.dao.AuthorDAOOnlineImpl;
-import com.revature.dao.BookDAOOnlineImpl;
+import com.revature.dao.*;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class AdminMenu extends MainMenu{
     private Scanner input = new Scanner(System.in);
+    BookDAOOnlineImpl bookDAOOnline = new BookDAOOnlineImpl();
+    AuthorDAOOnlineImpl authorDAOOnline = new AuthorDAOOnlineImpl();
+    IPersonRepo iPersonRepo = null;
+
+
+
 
     public void start() {
         String userInput;
@@ -21,25 +25,29 @@ public class AdminMenu extends MainMenu{
             System.out.println("[5] Add a book");
             System.out.println("[6] Exit application");
 
-            //switch for user input to point them to appropriate places in the code
-
             userInput = input.nextLine();
             switch (userInput) {
                 case "1":
                     //books menu
-                    BookDAOOnlineImpl bookDAOOnline = new BookDAOOnlineImpl();
                     bookDAOOnline.getAllBooks();
                     break;
                 case "2":
                     //authors list
-                    AuthorDAOOnlineImpl authorDAOOnline = new AuthorDAOOnlineImpl();
                     authorDAOOnline.getAllAuthors();
                     break;
                 case "3":
                     //myBooks menu
+                    bookDAOOnline.getMyBooks();
                     break;
                 case "4":
-                    //users list
+                    //users lists and profiles
+                    try {
+                        iPersonRepo = new PersonRepoDB();
+                        iPersonRepo.getAllUsers();
+                    } catch (Exception e) {
+                        System.out.println("Error : " + e.getMessage());
+                        e.printStackTrace();
+                    }
 
                     break;
                 case "5":

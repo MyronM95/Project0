@@ -83,20 +83,20 @@ public class Person implements Serializable {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return id == person.id &&
-                isAdmin == person.isAdmin &&
-                Objects.equals(name, person.name) &&
-                Objects.equals(username, person.username) &&
-                Objects.equals(password, person.password);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, username, password, isAdmin);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Person person = (Person) o;
+//        return id == person.id &&
+//                isAdmin == person.isAdmin &&
+//                Objects.equals(name, person.name) &&
+//                Objects.equals(username, person.username) &&
+//                Objects.equals(password, person.password);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(id, name, username, password, isAdmin);
+//    }
 }

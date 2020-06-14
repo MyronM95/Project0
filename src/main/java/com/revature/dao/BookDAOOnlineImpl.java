@@ -7,10 +7,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class BookDAOOnlineImpl implements BookDAO{
     ConnectionService connectionService = ConnectionService.getInstance();
+
+    Scanner input = new Scanner(System.in);
 
     public BookDAOOnlineImpl(){}
 
@@ -18,8 +20,7 @@ public class BookDAOOnlineImpl implements BookDAO{
     public ArrayList<Book> getAllBooks() {
         int indexNum = 1;
 
-        //Instantiate a new ArrayLists of Books
-        ArrayList<Book> bookArrayList = new ArrayList<Book>();
+        ArrayList<Book> bookArrayList = new ArrayList<>();
 
         try {
 
@@ -43,10 +44,11 @@ public class BookDAOOnlineImpl implements BookDAO{
             }
             return bookArrayList;
         }catch(SQLException e){
+            System.out.println("Error : " + e.getMessage());
             e.printStackTrace();
 
         } catch (Exception e){
-
+            System.out.println("Error : " + e.getMessage());
         }
 
         return null;
@@ -65,18 +67,54 @@ public class BookDAOOnlineImpl implements BookDAO{
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
-                //Gets the data from the specified columns and uses them as parameters to create a new Medication
                 Book book = new Book(rs.getString("book_name"), rs.getString("ISBN"), rs.getInt("author_id"));
-                //Adds the new medication to the medicationList Array
                 bookArrayList.add(book);
             }
 
             return bookArrayList;
         }catch(SQLException e){
+            System.out.println("Error : " + e.getMessage());
             e.printStackTrace();
 
         } catch (Exception e){
+            System.out.println("Error : " + e.getMessage());
+        }
 
+        return null;
+    }
+
+    public ArrayList<Book> getMyBooks() {
+        int indexNum = 1;
+        ArrayList<Book> bookRatingsArrayList = new ArrayList<>();
+
+        try {
+            PreparedStatement ps = connectionService.getConnection().prepareStatement("select books.book_name, ratings.rating from ratings left join users on ratings.userid = users.id inner join books on ratings.isbn = books.isbn where users.username = ?");
+            System.out.print("Enter your username: ");
+            String userName = input.nextLine();
+            ps.setString(1, userName);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()){
+                Book book = new Book(rs.getString("book_name"), rs.getInt("rating"));
+                bookRatingsArrayList.add(book);
+            }
+
+            System.out.println("You have read and rated: " + bookRatingsArrayList.size() + " books.");
+
+
+
+            for (Book book : bookRatingsArrayList) {
+
+                System.out.println("["+indexNum+ "] " + book.ratingString());
+                ++indexNum;
+            }
+            return bookRatingsArrayList;
+        }catch(SQLException e){
+            System.out.println("Error : " + e.getMessage());
+            e.printStackTrace();
+
+        } catch (Exception e){
+            System.out.println("Error : " + e.getMessage());
         }
 
         return null;
@@ -105,6 +143,7 @@ public class BookDAOOnlineImpl implements BookDAO{
 
 
             }catch (SQLException e){
+                System.out.println("Error : " + e.getMessage());
                 e.printStackTrace();
             }
 

@@ -5,6 +5,7 @@ public class Book {
     private String bookName;
     private String isbn;
     private int author_id;
+    private int rating;
 
     public Book(String bookName, String isbn, int author_id) {
         this.bookName = bookName;
@@ -13,6 +14,9 @@ public class Book {
     }
 
     public Book(String book_name, String isbn) {
+    }
+
+    public Book(String book_name, int rating) {
     }
 
     public String getBookName() {
@@ -39,12 +43,26 @@ public class Book {
         this.author_id = author_id;
     }
 
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+
     @Override
     public String toString() {
         return "Book{" +
                 "bookName='" + bookName + '\'' +
                 ", isbn='" + isbn + '\'' +
-                ", author_id='" + author_id + '\'' +
+                ", author_id=" + author_id +
                 '}';
+    }
+
+    public String ratingString(){
+        return  "Book{" +
+                "bookName='" + bookName + ", '+ rating= " + rating +'}';
     }
 }

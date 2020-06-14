@@ -27,20 +27,18 @@ public class PersonRepoFile implements IPersonRepo{
     }
 
     @Override
-    public List<Person> getAllUsers() {
-        // TODO Auto-generated method stub
+    public ArrayList<Person> getAllUsers() {
         try {
             ObjectInputStream inputStream =
                     new ObjectInputStream(new FileInputStream(filepath));
             List<Person> retrievedPersons = (ArrayList<Person>) inputStream.readObject();
             inputStream.close();
-            return retrievedPersons;
+            return (ArrayList<Person>) retrievedPersons;
         } catch (IOException e) {
             // TODO Auto-generated catch block
-            //e.printStackTrace();
+           e.printStackTrace();
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block
-            //Just in class Hero class is not found
             e.printStackTrace();
         }
 
