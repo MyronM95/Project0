@@ -18,7 +18,7 @@ public class BookDAOOnlineImpl implements BookDAO{
     public ArrayList<Book> getAllBooks() {
         int indexNum = 1;
 
-        //Instantiate a new ArrayLists of Medications
+        //Instantiate a new ArrayLists of Books
         ArrayList<Book> bookArrayList = new ArrayList<Book>();
 
         try {
@@ -27,9 +27,8 @@ public class BookDAOOnlineImpl implements BookDAO{
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
-                //Gets the data from the specified columns and uses them as parameters to create a new Medication
+
                 Book book = new Book(rs.getString("book_name"), rs.getString("ISBN"), rs.getInt("author_id"));
-                //Adds the new medication to the medicationList Array
                 bookArrayList.add(book);
             }
 
@@ -57,7 +56,7 @@ public class BookDAOOnlineImpl implements BookDAO{
     private ArrayList<Book> getAllBooksNoPrint() {
         int indexNum = 1;
 
-        //Instantiate a new ArrayLists of Medications
+
         ArrayList<Book> bookArrayList = new ArrayList<Book>();
 
         try {

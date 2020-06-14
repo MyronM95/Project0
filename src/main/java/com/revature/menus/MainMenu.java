@@ -7,7 +7,7 @@ import com.revature.services.PersonService;
 import java.util.Scanner;
 
 public class MainMenu {
-    private Scanner input = new Scanner(System.in);
+     Scanner input = new Scanner(System.in);
     private PersonService service = new PersonService(new PersonRepoFile());
 
     public void start() {
@@ -22,23 +22,24 @@ public class MainMenu {
             //switch for user input to point them to appropriate places in the code
 
             userInput = input.nextLine();
-            switch (userInput) {
-                case "1":
-                    //login menu
-                    LoginService loginService = new LoginService();
-                    loginService.LoginService();
-                    break;
-                case "2":
-                    service.createNewPerson();
-                    break;
-                case "3":
-                    System.out.println("Exiting....");
-                    break;
-                default:
-                    System.out.println("Invalid input please try again!");
 
-            }
-        } while(!userInput.equals("2"));
-        input.close();
+                switch (userInput) {
+                    case "1":
+                        //login menu
+                        LoginService loginService = new LoginService();
+                        loginService.LoginService();
+                        break;
+                    case "2":
+                        service.createNewPerson();
+                        break;
+                    case "3":
+                        System.out.println("Exiting....");
+                        break;
+                    default:
+                        System.out.println("Invalid input please try again!");
+                }
+        }
+            while (input.hasNextInt()) ;
+            input.close();
     }
 }

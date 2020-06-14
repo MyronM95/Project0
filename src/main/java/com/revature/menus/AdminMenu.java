@@ -1,5 +1,9 @@
 package com.revature.menus;
 
+import com.revature.dao.AuthorDAOOnlineImpl;
+import com.revature.dao.BookDAOOnlineImpl;
+
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class AdminMenu extends MainMenu{
@@ -23,18 +27,25 @@ public class AdminMenu extends MainMenu{
             switch (userInput) {
                 case "1":
                     //books menu
+                    BookDAOOnlineImpl bookDAOOnline = new BookDAOOnlineImpl();
+                    bookDAOOnline.getAllBooks();
                     break;
                 case "2":
                     //authors list
+                    AuthorDAOOnlineImpl authorDAOOnline = new AuthorDAOOnlineImpl();
+                    authorDAOOnline.getAllAuthors();
                     break;
                 case "3":
                     //myBooks menu
                     break;
                 case "4":
                     //users list
+
                     break;
                 case "5":
                     //Add a book
+                    AddBookMenu addBookMenu = new AddBookMenu();
+                    addBookMenu.start();
                     break;
                 case "6":
                     System.out.println("Exiting....");
