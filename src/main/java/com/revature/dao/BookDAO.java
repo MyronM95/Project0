@@ -6,6 +6,6 @@ import java.util.ArrayList;
 
 public interface BookDAO {
     public ArrayList<Book> getAllBooks();
-    public ArrayList<Book> getMyBooks();
+    public ArrayList<Book> getProfiles();
     public boolean addNewBook(Book book);
 }

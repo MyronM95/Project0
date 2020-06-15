@@ -83,13 +83,13 @@ public class BookDAOOnlineImpl implements BookDAO{
         return null;
     }
 
-    public ArrayList<Book> getMyBooks() {
+    public ArrayList<Book> getProfiles() {
         int indexNum = 1;
         ArrayList<Book> bookRatingsArrayList = new ArrayList<>();
 
         try {
             PreparedStatement ps = connectionService.getConnection().prepareStatement("select books.book_name, ratings.rating from ratings left join users on ratings.userid = users.id inner join books on ratings.isbn = books.isbn where users.username = ?");
-            System.out.print("Enter your username: ");
+            System.out.print("Enter the username of the profile you would like to lookup : ");
             String userName = input.nextLine();
             ps.setString(1, userName);
             ResultSet rs = ps.executeQuery();
@@ -97,6 +97,7 @@ public class BookDAOOnlineImpl implements BookDAO{
             while (rs.next()){
                 Book book = new Book(rs.getString("book_name"), rs.getInt("rating"));
                 bookRatingsArrayList.add(book);
+                //System.out.println("HIII");
             }
 
             System.out.println("You have read and rated: " + bookRatingsArrayList.size() + " books.");

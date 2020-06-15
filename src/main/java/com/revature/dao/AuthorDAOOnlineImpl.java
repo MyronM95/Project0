@@ -27,7 +27,7 @@ public class AuthorDAOOnlineImpl implements AuthorDao{
 
             while (rs.next()){
 
-                Author author = new Author(rs.getString("name"));
+                Author author = new Author(rs.getString("author_name"));
                 authorArrayList.add(author);
             }
 

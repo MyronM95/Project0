@@ -13,10 +13,14 @@ public class Book {
         this.author_id = author_id;
     }
 
-    public Book(String book_name, String isbn) {
+    public Book(String bookName, String isbn) {
+        this.bookName = bookName;
+        this.isbn = isbn;
     }
 
-    public Book(String book_name, int rating) {
+    public Book(String bookName, int rating) {
+        this.bookName = bookName;
+        this.rating = rating;
     }
 
     public String getBookName() {

@@ -11,7 +11,7 @@ public class MainMenu {
     private PersonService service = new PersonService(new PersonRepoFile());
 
     public void start() {
-        String userInput;
+        String userInput = "";
         do {
             System.out.println("Welcome to the GoodReads Console Application!");
             System.out.println("Please choose from the following options");
@@ -34,6 +34,7 @@ public class MainMenu {
                         break;
                     case "3":
                         System.out.println("Exiting....");
+                        System.exit(0);
                         break;
                     default:
                         System.out.println("Invalid input please try again!");

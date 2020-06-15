@@ -67,7 +67,7 @@ public class BookDAOImpl implements BookDAO {
         return null;
     }
 
-    public ArrayList<Book> getMyBooks() {
+    public ArrayList<Book> getProfiles() {
 
 
         try {

@@ -20,7 +20,7 @@ public class AdminMenu extends MainMenu{
             System.out.println("Please choose from the following options");
             System.out.println("[1] Rate a book");
             System.out.println("[2] See authors");
-            System.out.println("[3] See my books");
+            System.out.println("[3] Search users' profiles (including your own)");
             System.out.println("[4] See users");
             System.out.println("[5] Add a book");
             System.out.println("[6] Exit application");
@@ -37,7 +37,7 @@ public class AdminMenu extends MainMenu{
                     break;
                 case "3":
                     //myBooks menu
-                    bookDAOOnline.getMyBooks();
+                    bookDAOOnline.getProfiles();
                     break;
                 case "4":
                     //users lists and profiles
