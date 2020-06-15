@@ -17,7 +17,8 @@ public class Person implements Serializable {
     }
 
     public Person(String username, String password){
-
+        this.username = username;
+        this.password = password;
     }
 
     public Person(int id, String name, String username, String password, boolean isAdmin) {
