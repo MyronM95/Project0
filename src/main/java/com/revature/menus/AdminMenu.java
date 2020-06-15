@@ -8,6 +8,7 @@ public class AdminMenu extends MainMenu{
     private Scanner input = new Scanner(System.in);
     BookDAOOnlineImpl bookDAOOnline = new BookDAOOnlineImpl();
     AuthorDAOOnlineImpl authorDAOOnline = new AuthorDAOOnlineImpl();
+    AddBookMenu addBookMenu = new AddBookMenu();
     IPersonRepo iPersonRepo = null;
 
 
@@ -23,7 +24,8 @@ public class AdminMenu extends MainMenu{
             System.out.println("[3] Search users' profiles (including your own)");
             System.out.println("[4] See users");
             System.out.println("[5] Add a book");
-            System.out.println("[6] Exit application");
+            System.out.println("[6] Delete a user");
+            System.out.println("[7] Exit application");
 
             userInput = input.nextLine();
             switch (userInput) {
@@ -52,10 +54,19 @@ public class AdminMenu extends MainMenu{
                     break;
                 case "5":
                     //Add a book
-                    AddBookMenu addBookMenu = new AddBookMenu();
                     addBookMenu.start();
                     break;
                 case "6":
+                    //delete a user's profile
+                    try {
+                        iPersonRepo = new PersonRepoDB();
+                        iPersonRepo.deleteUser();
+                    } catch (Exception e) {
+                        System.out.println("Error : " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                    break;
+                case "7":
                     System.out.println("Exiting....");
                     System.exit(0);
                     break;

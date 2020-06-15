@@ -8,11 +8,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PersonRepoDB implements IPersonRepo{
 
     ConnectionService connectionService = ConnectionService.getInstance();
+    Scanner input = new Scanner(System.in);
 
+    public PersonRepoDB() {
+    }
 
     @Override
     public Person addPerson(Person person) {
@@ -56,4 +60,28 @@ public class PersonRepoDB implements IPersonRepo{
         return null;
 
     }
-}
+
+    public boolean deleteUser() {
+
+        int indexNum = 1;
+        try {
+            ArrayList<Person> usersList = this.getAllUsers();
+            Person person = usersList.get(indexNum -1);
+
+            PreparedStatement ps = connectionService.getConnection().prepareStatement("DELETE from public.users where users.username = ?");
+            System.out.print("Enter the username of the profile you would like to delete : ");
+            String userName = input.nextLine();
+            ps.setString(1, person.getUsername());
+
+            boolean didWork = ps.execute();
+            System.out.println("Deleted: " + person.toString());
+            return didWork;
+
+
+        } catch (Exception e) {
+            System.out.println("No profile with that username exits.");
+            return false;
+        }
+
+    }
+    }

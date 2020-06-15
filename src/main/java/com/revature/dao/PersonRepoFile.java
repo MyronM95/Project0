@@ -44,4 +44,12 @@ public class PersonRepoFile implements IPersonRepo{
 
         return new ArrayList<Person>();
     }
+
+    @Override
+    public boolean deleteUser() {
+        return false;
+    }
+
+
+
 }
