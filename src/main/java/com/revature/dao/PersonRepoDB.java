@@ -71,10 +71,10 @@ public class PersonRepoDB implements IPersonRepo{
             PreparedStatement ps = connectionService.getConnection().prepareStatement("DELETE from public.users where users.username = ?");
             System.out.print("Enter the username of the profile you would like to delete : ");
             String userName = input.nextLine();
-            ps.setString(1, person.getUsername());
+            ps.setString(1, userName);
 
             boolean didWork = ps.execute();
-            System.out.println("Deleted: " + person.toString());
+            System.out.println("Deleted: " +userName);
             return didWork;
 
 

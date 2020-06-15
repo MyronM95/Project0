@@ -56,10 +56,10 @@ public class BookDAOOnlineImpl implements BookDAO{
 
 
     private ArrayList<Book> getAllBooksNoPrint() {
-        int indexNum = 1;
 
 
-        ArrayList<Book> bookArrayList = new ArrayList<Book>();
+
+        ArrayList<Book> bookArrayList = new ArrayList<>();
 
         try {
 

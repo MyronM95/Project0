@@ -38,8 +38,8 @@ public class PersonService {
             }else{
                 try {
 
-                    final Person newPerson = new Person(name, userName, password);
-                    checkForPerson(newPerson.getName(), newPerson.getUsername());
+//                    final Person newPerson = new Person(name, userName, password);
+//                    checkForPerson(newPerson.getName(), newPerson.getUsername());
                     System.out.println("Creating User");
                     PreparedStatement ps = connectionService.getConnection().prepareStatement("insert into users (username, userpassword, name, is_admin) values (?,?,?,?)");
                     ps.setString(1, userName);
@@ -48,11 +48,11 @@ public class PersonService {
                     ps.setBoolean(4,false);
                     System.out.println("New User Added!");
 
-                    Thread addPersonThread = new Thread(() -> {
-                        repo.addPerson(newPerson);
-                        System.out.println("New User Added!");
-                    });
-                    addPersonThread.start();
+//                    Thread addPersonThread = new Thread(() -> {
+//                        repo.addPerson(newPerson);
+//                        System.out.println("New User Added!");
+//                    });
+//                    addPersonThread.start();
                     success = true;
                     System.exit(0);
                 } catch (SQLException e) {
@@ -71,15 +71,15 @@ public class PersonService {
         }
     }
 
-    public Person checkForPerson(String userName, String name) {
-        ArrayList<Person> array = (ArrayList<Person>) repo.getAllUsers();
-        for (Person person: array) {
-            if(person.getUsername().equals(userName) && person.getName().equals(name)) {
-                return person;
-            } else{
-                return person;
-            }
-        }
-        return null;
-    }
+//    public Person checkForPerson(String userName, String name) {
+//        ArrayList<Person> array = (ArrayList<Person>) repo.getAllUsers();
+//        for (Person person: array) {
+//            if(person.getUsername().equals(userName) && person.getName().equals(name)) {
+//                return person;
+//            } else{
+//                return person;
+//            }
+//        }
+//        return null;
+//    }
 }
