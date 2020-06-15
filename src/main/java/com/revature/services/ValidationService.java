@@ -5,18 +5,18 @@ import java.util.Scanner;
 public class ValidationService {
     Scanner input = new Scanner(System.in);
     boolean invalid = true;
-    //prompts the user for a non empty string, could be improved
+
     public String getValidStringInput(String prompt) {
         String userInput;
         do {
             System.out.println(prompt);
             userInput = input.nextLine();
             if(!userInput.isEmpty()) break;
-            System.out.println("Please input non empty string");
+            System.out.println("Please enter a  non-empty string");
         } while (invalid);
         return userInput;
     }
-    //prompts user for a valid integer
+    //prompts user for a valid int
     public int getValidInt(String prompt) {
         int userInput = 0;
         do {
@@ -24,14 +24,13 @@ public class ValidationService {
             try {
                 userInput = Integer.parseInt(input.nextLine());
                 break;
-            } catch (NumberFormatException ex) {
+            } catch (NumberFormatException e) {
                 System.out.println("Please input valid integers");
             }
         } while(invalid);
         return userInput;
     }
-    //prompts the user for a valid boolean
-    //can be improved if you only want the answer true or false
+
     public boolean getValidBoolean(String prompt) {
         invalid = true;
         String userInput;
@@ -39,7 +38,7 @@ public class ValidationService {
             System.out.println(prompt);
             userInput = input.nextLine();
             if(userInput.equalsIgnoreCase("true") || userInput.equalsIgnoreCase("false")) break;
-            System.out.println("Please input either true or false");
+            System.out.println("Please type either 'true' or 'false'");
         } while (invalid);
         return Boolean.parseBoolean(userInput);
 
