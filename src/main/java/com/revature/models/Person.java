@@ -30,6 +30,9 @@ public class Person implements Serializable {
     }
 
     public Person(String name, String userName, String password) {
+        this.name = name;
+        this.username = userName;
+        this.password = password;
     }
 
 
