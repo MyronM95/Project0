@@ -4,7 +4,6 @@ import com.revature.models.Book;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 
 public class BookDAOImpl implements BookDAO {
     ArrayList<Book> bookArrayList = new ArrayList<>();
@@ -121,7 +120,7 @@ public class BookDAOImpl implements BookDAO {
             try {
                 ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(filePath));
                 objectOutputStream.writeObject(bookArrayList);
-                System.out.println("Added Medication Successfully.");
+                System.out.println("Added book Successfully.");
                 objectOutputStream.close();
 
             } catch (IOException e) {
@@ -133,9 +132,14 @@ public class BookDAOImpl implements BookDAO {
 
         } catch (Exception e) {
             System.out.println(e.getStackTrace());
-            System.out.println("Error Adding Medication. Please Check your inputs.");
+            System.out.println("Error while adding new book. Please Check your inputs.");
             return false;
         }
+    }
+
+    @Override
+    public boolean addRating() {
+        return true;
     }
 
     public ArrayList<Book> getBookArrayList() {

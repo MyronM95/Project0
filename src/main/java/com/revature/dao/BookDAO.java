@@ -9,4 +9,5 @@ public interface BookDAO {
     public ArrayList<Book> getProfiles();
     public ArrayList<Book> getAllBooksRatings();
     public boolean addNewBook(Book book);
+    public boolean addRating();
 }

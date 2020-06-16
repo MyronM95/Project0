@@ -3,6 +3,7 @@ package com.revature.dao;
 import com.revature.models.Author;
 import com.revature.models.Book;
 import com.revature.services.ConnectionService;
+import com.revature.services.ValidationService;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 
 public class AuthorDAOOnlineImpl implements AuthorDao{
     ConnectionService connectionService = ConnectionService.getInstance();
+    ValidationService inputValidation = new ValidationService();
     public AuthorDAOOnlineImpl(){}
 
     @Override
@@ -56,7 +58,7 @@ public class AuthorDAOOnlineImpl implements AuthorDao{
     }
 
     private ArrayList<Author> getAllAuthorsNoPrint() {
-        int indexNum = 1;
+//        int indexNum = 1;
 
 
         ArrayList<Author> authorArrayList = new ArrayList<Author>();

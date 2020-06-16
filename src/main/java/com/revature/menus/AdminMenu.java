@@ -1,15 +1,19 @@
 package com.revature.menus;
 
 import com.revature.dao.*;
+import com.revature.services.LoginService;
+import com.revature.services.ValidationService;
 
 import java.util.Scanner;
 
 public class AdminMenu extends MainMenu{
-    private Scanner input = new Scanner(System.in);
+    //private Scanner input = new Scanner(System.in);
     BookDAOOnlineImpl bookDAOOnline = new BookDAOOnlineImpl();
     AuthorDAOOnlineImpl authorDAOOnline = new AuthorDAOOnlineImpl();
     AddBookMenu addBookMenu = new AddBookMenu();
     IPersonRepo iPersonRepo = null;
+    ValidationService inputValidation = new ValidationService();
+
 
 
 
@@ -17,8 +21,7 @@ public class AdminMenu extends MainMenu{
     public void start() {
         String userInput;
         do {
-            System.out.println("-------------------------------------------------------------------------------------------");
-            System.out.println("-------------------------------------------------------------------------------------------");
+
 
             System.out.println("Welcome to the GoodReads Console Application!");
             System.out.println("Please choose from the following options");
@@ -30,11 +33,13 @@ public class AdminMenu extends MainMenu{
             System.out.println("[6] Delete a user");
             System.out.println("[7] Exit application");
 
-            userInput = input.nextLine();
+            //userInput = input.nextLine();
+            userInput = inputValidation.getValidStringInput("Please choose from the above options: ");
             switch (userInput) {
                 case "1":
                     //books menu
                     bookDAOOnline.getAllBooksRatings();
+                    bookDAOOnline.addRating();
                     break;
                 case "2":
                     //authors list

@@ -25,7 +25,6 @@ public class PersonService {
     }
     public void createNewPerson() {
         boolean success = false;
-        //get user input
         do {
             String name = inputValidation.getValidStringInput("Enter your name: ");
 

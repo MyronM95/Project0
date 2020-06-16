@@ -3,6 +3,7 @@ package com.revature.dao;
 import com.revature.models.Book;
 import com.revature.models.Person;
 import com.revature.services.ConnectionService;
+import com.revature.services.ValidationService;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,7 +14,8 @@ import java.util.Scanner;
 public class PersonRepoDB implements IPersonRepo{
 
     ConnectionService connectionService = ConnectionService.getInstance();
-    Scanner input = new Scanner(System.in);
+    ValidationService inputValidation = new ValidationService();
+    //Scanner input = new Scanner(System.in);
 
     public PersonRepoDB() {
     }
@@ -77,8 +79,8 @@ public class PersonRepoDB implements IPersonRepo{
             Person person = usersList.get(indexNum -1);
 
             PreparedStatement ps = connectionService.getConnection().prepareStatement("DELETE from public.users where users.username = ?");
-            System.out.print("Enter the username of the profile you would like to delete : ");
-            String userName = input.nextLine();
+//            System.out.print("Enter the username of the profile you would like to delete : ");
+            String userName = inputValidation.getValidStringInput("Enter the username of the profile you would like to delete : ");
             ps.setString(1, userName);
 
             boolean didWork = ps.execute();

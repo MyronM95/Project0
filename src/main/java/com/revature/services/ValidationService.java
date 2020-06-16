@@ -10,7 +10,7 @@ public class ValidationService {
         String userInput;
         do {
             System.out.println(prompt);
-            userInput = input.nextLine();
+            userInput = input.next();
             if(!userInput.isEmpty()) break;
             System.out.println("Please enter a  non-empty string");
         } while (invalid);
