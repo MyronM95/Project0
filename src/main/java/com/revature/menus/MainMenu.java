@@ -13,6 +13,9 @@ public class MainMenu {
     public void start() {
         String userInput = "";
         do {
+            System.out.println("-------------------------------------------------------------------------------------------");
+            System.out.println("-------------------------------------------------------------------------------------------");
+
             System.out.println("Welcome to the GoodReads Console Application!");
             System.out.println("Please choose from the following options");
             System.out.println("[1] Log in");

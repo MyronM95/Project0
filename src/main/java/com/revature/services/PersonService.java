@@ -1,6 +1,7 @@
 package com.revature.services;
 
 import com.revature.dao.IPersonRepo;
+import com.revature.dao.PersonRepoDB;
 import com.revature.exceptions.InvalidUsernameException;
 import com.revature.models.Person;
 
@@ -13,6 +14,8 @@ import java.util.List;
 public class PersonService {
     ValidationService inputValidation = new ValidationService();
     IPersonRepo repo;
+
+
     ConnectionService connectionService = ConnectionService.getInstance();
 
 
@@ -38,8 +41,6 @@ public class PersonService {
             }else{
                 try {
 
-//                    final Person newPerson = new Person(name, userName, password);
-//                    checkForPerson(newPerson.getName(), newPerson.getUsername());
                     System.out.println("Creating User");
                     PreparedStatement ps = connectionService.getConnection().prepareStatement("insert into users (username, userpassword, name, is_admin) values (?,?,?,?)");
                     ps.setString(1, userName);
@@ -48,11 +49,6 @@ public class PersonService {
                     ps.setBoolean(4,false);
                     System.out.println("New User Added!");
 
-//                    Thread addPersonThread = new Thread(() -> {
-//                        repo.addPerson(newPerson);
-//                        System.out.println("New User Added!");
-//                    });
-//                    addPersonThread.start();
                     success = true;
                     System.exit(0);
                 } catch (SQLException e) {
@@ -64,12 +60,8 @@ public class PersonService {
 
 
     }
-    public void getPersons() {
-        ArrayList<Person> retrievedPersons = (ArrayList<Person>) repo.getAllUsers();
-        for(Person person: retrievedPersons) {
-            System.out.println(person);
-        }
-    }
+
+
 
 //    public Person checkForPerson(String userName, String name) {
 //        ArrayList<Person> array = (ArrayList<Person>) repo.getAllUsers();

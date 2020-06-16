@@ -98,6 +98,11 @@ public class BookDAOImpl implements BookDAO {
         return null;
     }
 
+    @Override
+    public ArrayList<Book> getAllBooksRatings() {
+        return null;
+    }
+
 
     @Override
     public boolean addNewBook(Book book) {

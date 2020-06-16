@@ -3,7 +3,9 @@ package com.revature.menus;
 import com.revature.dao.AuthorDAOOnlineImpl;
 import com.revature.dao.BookDAOOnlineImpl;
 import com.revature.dao.IPersonRepo;
+import com.revature.models.Book;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserMenu extends MainMenu{
@@ -15,6 +17,9 @@ public class UserMenu extends MainMenu{
     public void start() {
     String userInput;
     do {
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------");
+
         System.out.println("Welcome to the GoodReads Console Application!");
         System.out.println("Please choose from the following options");
         System.out.println("[1] Rate a book");
@@ -28,7 +33,7 @@ public class UserMenu extends MainMenu{
         switch (userInput) {
             case "1":
                 //books menu
-                bookDAOOnline.getAllBooks();
+                bookDAOOnline.getAllBooksRatings();
                 break;
             case "2":
                //authors list

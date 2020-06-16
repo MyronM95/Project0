@@ -23,6 +23,13 @@ public class Book {
         this.rating = rating;
     }
 
+    public Book(String bookName, int author_id, int rating, String isbn) {
+        this.bookName = bookName;
+        this.isbn = isbn;
+        this.author_id = author_id;
+        this.rating = rating;
+    }
+
     public String getBookName() {
         return bookName;
     }
@@ -64,6 +71,14 @@ public class Book {
                 ", author_id=" + author_id +
                 '}';
     }
+
+
+    public String ratingToString(){
+        return "Book{" +
+                "bookName='" + bookName + '\'' +
+                ", author_id=" + author_id +  ", isbn='" + isbn + '\'' + ", '+ rating= " + rating +'}';
+    }
+
 
     public String ratingString(){
         return  "Book{" +

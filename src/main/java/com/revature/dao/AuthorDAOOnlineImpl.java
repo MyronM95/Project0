@@ -17,9 +17,10 @@ public class AuthorDAOOnlineImpl implements AuthorDao{
     public ArrayList<Author> getAllAuthors() {
         int indexNum = 1;
 
-        //Instantiate a new ArrayLists of Authors
         ArrayList<Author> authorArrayList = new ArrayList<Author>();
 
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------");
         try {
 
             PreparedStatement ps = connectionService.getConnection().prepareStatement("SELECT * FROM authors;");
@@ -31,6 +32,7 @@ public class AuthorDAOOnlineImpl implements AuthorDao{
                 authorArrayList.add(author);
             }
 
+
             System.out.println("Currently are: " + authorArrayList.size() + " authors.");
 
 
@@ -39,6 +41,8 @@ public class AuthorDAOOnlineImpl implements AuthorDao{
 
                 System.out.println("["+indexNum+ "] " + author.toString());
                 ++indexNum;
+
+
             }
             return authorArrayList;
         }catch(SQLException e){

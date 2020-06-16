@@ -29,6 +29,9 @@ public class PersonRepoDB implements IPersonRepo{
 
         ArrayList<Person> personArrayList = new ArrayList<Person>();
 
+
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------");
         try {
 
             PreparedStatement ps = connectionService.getConnection().prepareStatement("SELECT * FROM public.users;");
@@ -40,6 +43,7 @@ public class PersonRepoDB implements IPersonRepo{
                 personArrayList.add(person);
             }
 
+
             System.out.println("Currently are: " + personArrayList.size() + " users.");
 
 
@@ -48,6 +52,8 @@ public class PersonRepoDB implements IPersonRepo{
 
                 System.out.println("["+indexNum+ "] " + person.toString());
                 ++indexNum;
+
+
             }
             return personArrayList;
         }catch(SQLException e){
@@ -64,6 +70,8 @@ public class PersonRepoDB implements IPersonRepo{
     public boolean deleteUser() {
 
         int indexNum = 1;
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------");
         try {
             ArrayList<Person> usersList = this.getAllUsers();
             Person person = usersList.get(indexNum -1);
@@ -75,6 +83,8 @@ public class PersonRepoDB implements IPersonRepo{
 
             boolean didWork = ps.execute();
             System.out.println("Deleted: " +userName);
+
+
             return didWork;
 
 

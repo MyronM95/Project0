@@ -1,20 +1,18 @@
 package com.revature.menus;
 
-import com.revature.dao.*;
+import com.revature.dao.PersonRepoDB;
+import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.Scanner;
 
-public class AdminMenu extends MainMenu{
-    private Scanner input = new Scanner(System.in);
-    BookDAOOnlineImpl bookDAOOnline = new BookDAOOnlineImpl();
-    AuthorDAOOnlineImpl authorDAOOnline = new AuthorDAOOnlineImpl();
-    AddBookMenu addBookMenu = new AddBookMenu();
-    IPersonRepo iPersonRepo = null;
+public class AdminMenuTest extends TestCase {
+    @Before public void initialize(){}
 
-
-
-
-    public void start() {
+    @Test
+    public void teststart(){
+        Scanner input = new Scanner(System.in);
         String userInput;
         do {
             System.out.println("-------------------------------------------------------------------------------------------");
@@ -34,21 +32,26 @@ public class AdminMenu extends MainMenu{
             switch (userInput) {
                 case "1":
                     //books menu
-                    bookDAOOnline.getAllBooksRatings();
+                    //bookDAOOnline.getAllBooksRatings();
+                    System.out.println("Call bookDAOOnline getAllBookRatings() method");
                     break;
                 case "2":
                     //authors list
-                    authorDAOOnline.getAllAuthors();
+                    //authorDAOOnline.getAllAuthors();
+                    System.out.println("Call authorDAOOnline getAllAuthors() method");
                     break;
                 case "3":
                     //myBooks menu
-                    bookDAOOnline.getProfiles();
+                    //bookDAOOnline.getProfiles();
+                    System.out.println("Call bookDAOOnline getAllProfiles() method");
                     break;
                 case "4":
                     //users lists and profiles
                     try {
-                        iPersonRepo = new PersonRepoDB();
-                        iPersonRepo.getAllUsers();
+                        //iPersonRepo = new PersonRepoDB();
+                        //iPersonRepo.getAllUsers();
+                        System.out.println("Instantiate a new iPersonRepo as a PersonRepoDB()");
+                        System.out.println("Call iPersonRepo getAllUsers() method");
                     } catch (Exception e) {
                         System.out.println("Error : " + e.getMessage());
                         e.printStackTrace();
@@ -58,13 +61,16 @@ public class AdminMenu extends MainMenu{
                 case "5":
                     //Add a book
                     //bookDAOOnline.addNewBook();
-                    addBookMenu.start();
+                    //addBookMenu.start();
+                    System.out.println("Call addBookMenu start() method");
                     break;
                 case "6":
                     //delete a user's profile
                     try {
-                        iPersonRepo = new PersonRepoDB();
-                        iPersonRepo.deleteUser();
+//                        iPersonRepo = new PersonRepoDB();
+//                        iPersonRepo.deleteUser();
+                        System.out.println("Instantiate a new iPersonRepo as a PersonRepoDB()");
+                        System.out.println("Call iPersonRepo deleteUsers() method");
                     } catch (Exception e) {
                         System.out.println("Error : " + e.getMessage());
                         e.printStackTrace();
@@ -81,4 +87,5 @@ public class AdminMenu extends MainMenu{
         } while(!userInput.equals("5"));
         input.close();
     }
-}
+    }
+
