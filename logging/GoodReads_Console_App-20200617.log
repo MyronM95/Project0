@@ -1,0 +1,36 @@
+2020-06-17 00:32:42.903 [main] INFO  com.revature.menus.MainMenu - Creating a new LoginService object
+2020-06-17 00:32:48.143 [main] INFO  com.revature.services.LoginService - Logging an administrator in
+2020-06-17 00:33:15.999 [main] INFO  com.revature.models.Book - New Book Created: A Dance with Dragons 0553801473 7 0
+2020-06-17 00:33:16.000 [main] INFO  com.revature.models.Book - New Book Created: A Clash of Kings 0008363749 7 0
+2020-06-17 00:33:16.000 [main] INFO  com.revature.models.Book - New Book Created: The Fellowship of the Ring 1112755411 6 0
+2020-06-17 00:33:16.000 [main] INFO  com.revature.models.Book - New Book Created: Talking to Strangers 0316478520 2 0
+2020-06-17 00:33:16.000 [main] INFO  com.revature.models.Book - New Book Created: The Winds of Winter 6486100 7 0
+2020-06-17 00:33:16.000 [main] INFO  com.revature.models.Book - New Book Created: The Silmarillion 0544338014 6 0
+2020-06-17 00:33:16.000 [main] INFO  com.revature.models.Book - New Book Created: The Two Towers 0618002235 6 0
+2020-06-17 00:33:16.000 [main] INFO  com.revature.models.Book - New Book Created: A Game of Thrones 0553381687 7 0
+2020-06-17 00:33:16.036 [main] INFO  com.revature.models.Book - New Book Created: The English Assassin 141019077 4 6
+2020-06-17 00:33:16.037 [main] INFO  com.revature.models.Book - New Book Created: The Idiot 0375702245 1 0
+2020-06-17 00:33:16.037 [main] INFO  com.revature.models.Book - New Book Created: The Brothers Karamazov 374528373 1 9
+2020-06-17 00:33:16.037 [main] INFO  com.revature.models.Book - New Book Created: The Double and the Gambler 0375719016 1 0
+2020-06-17 00:33:16.037 [main] INFO  com.revature.models.Book - New Book Created: The Return of the King 0345339738 6 9
+2020-06-17 00:33:16.037 [main] INFO  com.revature.models.Book - New Book Created: A Feast for Crows 055358202X 7 0
+2020-06-17 00:33:16.038 [main] INFO  com.revature.models.Book - New Book Created: A Canticle for Leibowitz 553273817 5 8
+2020-06-17 00:33:16.038 [main] INFO  com.revature.models.Book - New Book Created: Crime and Punishment 0486415872 1 0
+2020-06-17 00:33:16.038 [main] INFO  com.revature.models.Book - New Book Created: The Tipping Point 316346624 2 8
+2020-06-17 00:33:16.038 [main] INFO  com.revature.models.Book - New Book Created: The Brotherhood of the Rose 449206610 3 7
+2020-06-17 00:33:16.038 [main] INFO  com.revature.models.Book - New Book Created: Outliers 1945540338 2 7
+2020-06-17 00:33:16.038 [main] INFO  com.revature.models.Book - New Book Created: A Storm of Swords 0553381709 7 0
+2020-06-17 00:33:48.306 [main] INFO  com.revature.models.Author - New Author Created: Fyodor Dostoyevsky
+2020-06-17 00:33:48.307 [main] INFO  com.revature.models.Author - New Author Created: Malcom Gladwell
+2020-06-17 00:33:48.308 [main] INFO  com.revature.models.Author - New Author Created: David Morrell
+2020-06-17 00:33:48.308 [main] INFO  com.revature.models.Author - New Author Created: Daniel Silva
+2020-06-17 00:33:48.309 [main] INFO  com.revature.models.Author - New Author Created: Walter M. Miller
+2020-06-17 00:33:48.309 [main] INFO  com.revature.models.Author - New Author Created: J.R.R. Tolkien
+2020-06-17 00:33:48.310 [main] INFO  com.revature.models.Author - New Author Created: George R.R. Martin
+2020-06-17 00:33:58.206 [main] INFO  com.revature.models.Book - New Book Created: The Brothers Karamazov 10
+2020-06-17 00:33:58.206 [main] INFO  com.revature.models.Book - New Book Created: The Tipping Point 8
+2020-06-17 00:33:58.207 [main] INFO  com.revature.models.Book - New Book Created: The Brotherhood of the Rose 8
+2020-06-17 00:33:58.207 [main] INFO  com.revature.models.Book - New Book Created: The English Assassin 6
+2020-06-17 00:33:58.207 [main] INFO  com.revature.models.Book - New Book Created: A Canticle for Leibowitz 8
+2020-06-17 00:33:58.207 [main] INFO  com.revature.models.Book - New Book Created: The Return of the King 9
+2020-06-17 00:33:58.207 [main] INFO  com.revature.models.Book - New Book Created: Crime and Punishment 9
