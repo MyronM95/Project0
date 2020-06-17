@@ -9,22 +9,22 @@ import java.util.List;
 public class PersonRepoFile implements IPersonRepo{
     private String filepath = "C:\\Users\\myron\\IdeaProjects\\Project0\\src\\main\\java\\com\\revature\\resources\\Person.txt";
 
-    @Override
-    public synchronized Person addPerson(Person person) {
-        ArrayList<Person> currentPersons = (ArrayList<Person>) this.getAllUsers();
-        try {
-            ObjectOutputStream objectOutputStream =
-                    new ObjectOutputStream(new FileOutputStream(filepath));
-            currentPersons.add(person);
-            objectOutputStream.writeObject(currentPersons);
-            objectOutputStream.close();
-            return person;
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return null;
-    }
+//    @Override
+//    public synchronized boolean addPerson(Person person) {
+//        ArrayList<Person> currentPersons = (ArrayList<Person>) this.getAllUsers();
+//        try {
+//            ObjectOutputStream objectOutputStream =
+//                    new ObjectOutputStream(new FileOutputStream(filepath));
+//            currentPersons.add(person);
+//            objectOutputStream.writeObject(currentPersons);
+//            objectOutputStream.close();
+//            return person;
+//        } catch (IOException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
 
     @Override
     public ArrayList<Person> getAllUsers() {
@@ -42,7 +42,7 @@ public class PersonRepoFile implements IPersonRepo{
             e.printStackTrace();
         }
 
-        return new ArrayList<Person>();
+        return new ArrayList<>();
     }
 
     @Override

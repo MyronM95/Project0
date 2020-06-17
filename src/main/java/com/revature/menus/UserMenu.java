@@ -5,6 +5,8 @@ import com.revature.dao.BookDAOOnlineImpl;
 import com.revature.dao.IPersonRepo;
 import com.revature.models.Book;
 import com.revature.services.ValidationService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -15,6 +17,8 @@ public class UserMenu extends MainMenu{
     AuthorDAOOnlineImpl authorDAOOnline = new AuthorDAOOnlineImpl();
     //IPersonRepo iPersonRepo = null;
     ValidationService inputValidation = new ValidationService();
+    public static final Logger logger = (Logger) LogManager.getLogger(UserMenu.class.getName());
+
 
     public void start() {
     String userInput;
@@ -34,15 +38,18 @@ public class UserMenu extends MainMenu{
         switch (userInput) {
             case "1":
                 //books menu
+                logger.info("Creating a new bookDAOOnline object");
                 bookDAOOnline.getAllBooksRatings();
                 bookDAOOnline.addRating();
                 break;
             case "2":
                //authors list
+                logger.info("Creating a new authorDAOOnline object");
                 authorDAOOnline.getAllAuthors();
                 break;
             case "3":
                 //users list including the user's
+                logger.info("Creating a new bookDAOOnline object");
                 bookDAOOnline.getProfiles();
                 break;
             case "4":
@@ -53,7 +60,7 @@ public class UserMenu extends MainMenu{
                 System.out.println("Invalid input please try again!");
 
         }
-    } while(!userInput.equals("4"));
+    } while(!userInput.equals("5"));
     input.close();
     }
 }

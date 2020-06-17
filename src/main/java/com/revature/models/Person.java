@@ -1,9 +1,13 @@
 package com.revature.models;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Person implements Serializable {
+    private static final Logger logger = LogManager.getLogger(Person.class.getName());
 
     private int id;
     private String name;
@@ -17,11 +21,13 @@ public class Person implements Serializable {
     }
 
     public Person(String username, String password){
+        logger.info("New Person Created: " + username + " " + password );
         this.username = username;
         this.password = password;
     }
 
     public Person(int id, String name, String username, String password, boolean isAdmin) {
+        logger.info("New Person Created: "+ id + " "+ username + " " +name +" "+ password + " "+ isAdmin);
         this.id = id;
         this.name = name;
         this.username = username;
@@ -30,6 +36,7 @@ public class Person implements Serializable {
     }
 
     public Person(String name, String userName, String password) {
+        logger.info("New Person Created: "+ username + " " +name +" "+ password );
         this.name = name;
         this.username = userName;
         this.password = password;

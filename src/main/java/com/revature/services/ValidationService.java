@@ -2,6 +2,10 @@ package com.revature.services;
 
 import java.util.Scanner;
 
+
+//Credit to Marielle Nolasco and her TourOfHeros application for this class.
+//Her work is available at https://github.com/200601-USF-Pega/trainer-code.git
+
 public class ValidationService {
     Scanner input = new Scanner(System.in);
     boolean invalid = true;

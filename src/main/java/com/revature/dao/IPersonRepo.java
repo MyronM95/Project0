@@ -5,9 +5,9 @@ import com.revature.models.Person;
 import java.util.ArrayList;
 
 public interface IPersonRepo {
-    public Person addPerson(Person person);
-    public ArrayList<Person> getAllUsers();
-    public boolean deleteUser();
+   //boolean addPerson(Person person);
+   ArrayList<Person> getAllUsers();
+   boolean deleteUser();
 
 
 }
