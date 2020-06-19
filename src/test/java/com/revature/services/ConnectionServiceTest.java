@@ -5,7 +5,6 @@ import junit.framework.TestCase;
 import java.sql.Connection;
 
 public class ConnectionServiceTest extends TestCase {
-    // @Mock private  static  ConnectionService connectionService_single_instance = null;
     private Connection connection;
 
 

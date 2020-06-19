@@ -38,3 +38,118 @@
 2020-06-17 01:09:25.061 [main] INFO  com.revature.models.Book - New Book Created: Walls 0451211480 4
 2020-06-17 01:09:25.079 [main] INFO  com.revature.models.Book - New Book Created: Walls 0451211480 4
 2020-06-17 01:11:03.208 [main] INFO  com.revature.models.Book - New Book Created: Walls 0451211480 4
+2020-06-17 09:55:26.092 [main] INFO  com.revature.menus.MainMenu - Creating a new LoginService object
+2020-06-17 09:55:32.913 [main] INFO  com.revature.services.LoginService - Logging an administrator in
+2020-06-17 09:55:53.765 [main] INFO  com.revature.models.Book - New Book Created: A Dance with Dragons 0553801473 7 0
+2020-06-17 09:55:53.765 [main] INFO  com.revature.models.Book - New Book Created: A Clash of Kings 0008363749 7 0
+2020-06-17 09:55:53.765 [main] INFO  com.revature.models.Book - New Book Created: The Fellowship of the Ring 1112755411 6 0
+2020-06-17 09:55:53.766 [main] INFO  com.revature.models.Book - New Book Created: Talking to Strangers 0316478520 2 0
+2020-06-17 09:55:53.766 [main] INFO  com.revature.models.Book - New Book Created: The Winds of Winter 6486100 7 0
+2020-06-17 09:55:53.766 [main] INFO  com.revature.models.Book - New Book Created: The Silmarillion 0544338014 6 0
+2020-06-17 09:55:53.766 [main] INFO  com.revature.models.Book - New Book Created: The Two Towers 0618002235 6 0
+2020-06-17 09:55:53.766 [main] INFO  com.revature.models.Book - New Book Created: A Game of Thrones 0553381687 7 0
+2020-06-17 09:55:53.780 [main] INFO  com.revature.models.Book - New Book Created: The English Assassin 141019077 4 6
+2020-06-17 09:55:53.780 [main] INFO  com.revature.models.Book - New Book Created: The Idiot 0375702245 1 0
+2020-06-17 09:55:53.780 [main] INFO  com.revature.models.Book - New Book Created: The Brothers Karamazov 374528373 1 9
+2020-06-17 09:55:53.780 [main] INFO  com.revature.models.Book - New Book Created: The Double and the Gambler 0375719016 1 0
+2020-06-17 09:55:53.781 [main] INFO  com.revature.models.Book - New Book Created: The Return of the King 0345339738 6 9
+2020-06-17 09:55:53.781 [main] INFO  com.revature.models.Book - New Book Created: A Feast for Crows 055358202X 7 0
+2020-06-17 09:55:53.781 [main] INFO  com.revature.models.Book - New Book Created: A Canticle for Leibowitz 553273817 5 8
+2020-06-17 09:55:53.781 [main] INFO  com.revature.models.Book - New Book Created: Crime and Punishment 0486415872 1 9
+2020-06-17 09:55:53.781 [main] INFO  com.revature.models.Book - New Book Created: The Tipping Point 316346624 2 8
+2020-06-17 09:55:53.781 [main] INFO  com.revature.models.Book - New Book Created: The Brotherhood of the Rose 449206610 3 7
+2020-06-17 09:55:53.781 [main] INFO  com.revature.models.Book - New Book Created: Outliers 1945540338 2 7
+2020-06-17 09:55:53.781 [main] INFO  com.revature.models.Book - New Book Created: A Storm of Swords 0553381709 7 0
+2020-06-17 09:59:10.383 [main] INFO  com.revature.models.Author - New Author Created: Fyodor Dostoyevsky
+2020-06-17 09:59:10.384 [main] INFO  com.revature.models.Author - New Author Created: Malcom Gladwell
+2020-06-17 09:59:10.384 [main] INFO  com.revature.models.Author - New Author Created: David Morrell
+2020-06-17 09:59:10.384 [main] INFO  com.revature.models.Author - New Author Created: Daniel Silva
+2020-06-17 09:59:10.384 [main] INFO  com.revature.models.Author - New Author Created: Walter M. Miller
+2020-06-17 09:59:10.384 [main] INFO  com.revature.models.Author - New Author Created: J.R.R. Tolkien
+2020-06-17 09:59:10.384 [main] INFO  com.revature.models.Author - New Author Created: George R.R. Martin
+2020-06-17 09:59:37.628 [main] INFO  com.revature.models.Book - New Book Created: The Brotherhood of the Rose 8
+2020-06-17 09:59:37.629 [main] INFO  com.revature.models.Book - New Book Created: The Brothers Karamazov 9
+2020-06-17 10:00:02.504 [main] INFO  com.revature.models.Person - New Person Created: 9 Myron Mosaad MyronM MyronM true
+2020-06-17 10:00:02.504 [main] INFO  com.revature.models.Person - New Person Created: 10 John Doe JohnD JohnD false
+2020-06-17 10:00:02.504 [main] INFO  com.revature.models.Person - New Person Created: 11 Sam Adams SamA SamA false
+2020-06-17 10:00:02.504 [main] INFO  com.revature.models.Person - New Person Created: 12 George White GeorgeW GeorgeW false
+2020-06-17 10:00:02.505 [main] INFO  com.revature.models.Person - New Person Created: 13 David Massaron DavidM DavidM false
+2020-06-17 10:00:02.505 [main] INFO  com.revature.models.Person - New Person Created: 14 Tom Brady TomB TomB false
+2020-06-17 10:00:02.505 [main] INFO  com.revature.models.Person - New Person Created: 15 Tony Jefferson TonyJ TonyJ false
+2020-06-17 10:00:02.505 [main] INFO  com.revature.models.Person - New Person Created: 16 Randy Moss RandyM RandyM false
+2020-06-17 10:00:02.505 [main] INFO  com.revature.models.Person - New Person Created: 17 Sam Motts SamMotts 12345 false
+2020-06-17 10:00:22.425 [main] INFO  com.revature.models.Person - New Person Created: 9 Myron Mosaad MyronM MyronM true
+2020-06-17 10:00:22.425 [main] INFO  com.revature.models.Person - New Person Created: 10 John Doe JohnD JohnD false
+2020-06-17 10:00:22.425 [main] INFO  com.revature.models.Person - New Person Created: 11 Sam Adams SamA SamA false
+2020-06-17 10:00:22.426 [main] INFO  com.revature.models.Person - New Person Created: 12 George White GeorgeW GeorgeW false
+2020-06-17 10:00:22.426 [main] INFO  com.revature.models.Person - New Person Created: 13 David Massaron DavidM DavidM false
+2020-06-17 10:00:22.426 [main] INFO  com.revature.models.Person - New Person Created: 14 Tom Brady TomB TomB false
+2020-06-17 10:00:22.426 [main] INFO  com.revature.models.Person - New Person Created: 15 Tony Jefferson TonyJ TonyJ false
+2020-06-17 10:00:22.426 [main] INFO  com.revature.models.Person - New Person Created: 16 Randy Moss RandyM RandyM false
+2020-06-17 10:00:22.426 [main] INFO  com.revature.models.Person - New Person Created: 17 Sam Motts SamMotts 12345 false
+2020-06-17 10:00:43.452 [main] INFO  com.revature.models.Person - New Person Created: 9 Myron Mosaad MyronM MyronM true
+2020-06-17 10:00:43.452 [main] INFO  com.revature.models.Person - New Person Created: 10 John Doe JohnD JohnD false
+2020-06-17 10:00:43.452 [main] INFO  com.revature.models.Person - New Person Created: 11 Sam Adams SamA SamA false
+2020-06-17 10:00:43.452 [main] INFO  com.revature.models.Person - New Person Created: 12 George White GeorgeW GeorgeW false
+2020-06-17 10:00:43.452 [main] INFO  com.revature.models.Person - New Person Created: 13 David Massaron DavidM DavidM false
+2020-06-17 10:00:43.452 [main] INFO  com.revature.models.Person - New Person Created: 14 Tom Brady TomB TomB false
+2020-06-17 10:00:43.453 [main] INFO  com.revature.models.Person - New Person Created: 15 Tony Jefferson TonyJ TonyJ false
+2020-06-17 10:00:43.453 [main] INFO  com.revature.models.Person - New Person Created: 16 Randy Moss RandyM RandyM false
+2020-06-17 11:09:14.550 [main] INFO  com.revature.menus.MainMenu - Creating a new LoginService object
+2020-06-17 13:30:07.227 [main] INFO  com.revature.menus.MainMenu - Creating a new LoginService object
+2020-06-17 13:30:23.510 [main] INFO  com.revature.menus.MainMenu - Creating a new LoginService object
+2020-06-17 13:30:28.231 [main] INFO  com.revature.services.LoginService - Logging an administrator in
+2020-06-17 13:30:43.611 [main] INFO  com.revature.models.Person - New Person Created: 9 Myron Mosaad MyronM MyronM true
+2020-06-17 13:30:43.611 [main] INFO  com.revature.models.Person - New Person Created: 10 John Doe JohnD JohnD false
+2020-06-17 13:30:43.612 [main] INFO  com.revature.models.Person - New Person Created: 11 Sam Adams SamA SamA false
+2020-06-17 13:30:43.612 [main] INFO  com.revature.models.Person - New Person Created: 12 George White GeorgeW GeorgeW false
+2020-06-17 13:30:43.612 [main] INFO  com.revature.models.Person - New Person Created: 13 David Massaron DavidM DavidM false
+2020-06-17 13:30:43.612 [main] INFO  com.revature.models.Person - New Person Created: 14 Tom Brady TomB TomB false
+2020-06-17 13:30:43.612 [main] INFO  com.revature.models.Person - New Person Created: 15 Tony Jefferson TonyJ TonyJ false
+2020-06-17 13:30:43.612 [main] INFO  com.revature.models.Person - New Person Created: 16 Randy Moss RandyM RandyM false
+2020-06-17 13:30:52.836 [main] INFO  com.revature.models.Person - New Person Created: 9 Myron Mosaad MyronM MyronM true
+2020-06-17 13:30:52.836 [main] INFO  com.revature.models.Person - New Person Created: 10 John Doe JohnD JohnD false
+2020-06-17 13:30:52.836 [main] INFO  com.revature.models.Person - New Person Created: 11 Sam Adams SamA SamA false
+2020-06-17 13:30:52.836 [main] INFO  com.revature.models.Person - New Person Created: 12 George White GeorgeW GeorgeW false
+2020-06-17 13:30:52.836 [main] INFO  com.revature.models.Person - New Person Created: 13 David Massaron DavidM DavidM false
+2020-06-17 13:30:52.836 [main] INFO  com.revature.models.Person - New Person Created: 14 Tom Brady TomB TomB false
+2020-06-17 13:30:52.837 [main] INFO  com.revature.models.Person - New Person Created: 15 Tony Jefferson TonyJ TonyJ false
+2020-06-17 13:30:52.837 [main] INFO  com.revature.models.Person - New Person Created: 16 Randy Moss RandyM RandyM false
+2020-06-17 13:31:05.585 [main] INFO  com.revature.models.Person - New Person Created: 9 Myron Mosaad MyronM MyronM true
+2020-06-17 13:31:05.586 [main] INFO  com.revature.models.Person - New Person Created: 10 John Doe JohnD JohnD false
+2020-06-17 13:31:05.586 [main] INFO  com.revature.models.Person - New Person Created: 11 Sam Adams SamA SamA false
+2020-06-17 13:31:05.586 [main] INFO  com.revature.models.Person - New Person Created: 12 George White GeorgeW GeorgeW false
+2020-06-17 13:31:05.586 [main] INFO  com.revature.models.Person - New Person Created: 13 David Massaron DavidM DavidM false
+2020-06-17 13:31:05.586 [main] INFO  com.revature.models.Person - New Person Created: 14 Tom Brady TomB TomB false
+2020-06-17 13:31:05.587 [main] INFO  com.revature.models.Person - New Person Created: 15 Tony Jefferson TonyJ TonyJ false
+2020-06-17 13:31:20.863 [main] INFO  com.revature.models.Book - New Book Created: The Brotherhood of the Rose 8
+2020-06-17 13:31:20.863 [main] INFO  com.revature.models.Book - New Book Created: The Brothers Karamazov 9
+2020-06-17 13:31:30.008 [main] INFO  com.revature.models.Book - New Book Created: A Dance with Dragons 0553801473 7 0
+2020-06-17 13:31:30.009 [main] INFO  com.revature.models.Book - New Book Created: A Clash of Kings 0008363749 7 0
+2020-06-17 13:31:30.009 [main] INFO  com.revature.models.Book - New Book Created: The Fellowship of the Ring 1112755411 6 0
+2020-06-17 13:31:30.009 [main] INFO  com.revature.models.Book - New Book Created: Talking to Strangers 0316478520 2 0
+2020-06-17 13:31:30.009 [main] INFO  com.revature.models.Book - New Book Created: The Winds of Winter 6486100 7 0
+2020-06-17 13:31:30.009 [main] INFO  com.revature.models.Book - New Book Created: The Silmarillion 0544338014 6 0
+2020-06-17 13:31:30.009 [main] INFO  com.revature.models.Book - New Book Created: The Two Towers 0618002235 6 0
+2020-06-17 13:31:30.010 [main] INFO  com.revature.models.Book - New Book Created: A Game of Thrones 0553381687 7 0
+2020-06-17 13:31:30.011 [main] INFO  com.revature.models.Book - New Book Created: The English Assassin 141019077 4 6
+2020-06-17 13:31:30.011 [main] INFO  com.revature.models.Book - New Book Created: The Idiot 0375702245 1 0
+2020-06-17 13:31:30.012 [main] INFO  com.revature.models.Book - New Book Created: The Brothers Karamazov 374528373 1 9
+2020-06-17 13:31:30.012 [main] INFO  com.revature.models.Book - New Book Created: The Double and the Gambler 0375719016 1 0
+2020-06-17 13:31:30.012 [main] INFO  com.revature.models.Book - New Book Created: The Return of the King 0345339738 6 8
+2020-06-17 13:31:30.012 [main] INFO  com.revature.models.Book - New Book Created: A Feast for Crows 055358202X 7 0
+2020-06-17 13:31:30.012 [main] INFO  com.revature.models.Book - New Book Created: A Canticle for Leibowitz 553273817 5 8
+2020-06-17 13:31:30.012 [main] INFO  com.revature.models.Book - New Book Created: Crime and Punishment 0486415872 1 9
+2020-06-17 13:31:30.013 [main] INFO  com.revature.models.Book - New Book Created: The Tipping Point 316346624 2 8
+2020-06-17 13:31:30.013 [main] INFO  com.revature.models.Book - New Book Created: The Brotherhood of the Rose 449206610 3 7
+2020-06-17 13:31:30.013 [main] INFO  com.revature.models.Book - New Book Created: Outliers 1945540338 2 7
+2020-06-17 13:31:30.013 [main] INFO  com.revature.models.Book - New Book Created: A Storm of Swords 0553381709 7 0
+2020-06-17 13:32:11.585 [main] INFO  com.revature.models.Book - New Book Created: The Brothers Karamazov 10
+2020-06-17 13:32:11.585 [main] INFO  com.revature.models.Book - New Book Created: The Tipping Point 8
+2020-06-17 13:32:11.585 [main] INFO  com.revature.models.Book - New Book Created: The Brotherhood of the Rose 8
+2020-06-17 13:32:11.585 [main] INFO  com.revature.models.Book - New Book Created: The English Assassin 6
+2020-06-17 13:32:11.585 [main] INFO  com.revature.models.Book - New Book Created: A Canticle for Leibowitz 8
+2020-06-17 13:32:11.585 [main] INFO  com.revature.models.Book - New Book Created: The Return of the King 9
+2020-06-17 13:32:11.586 [main] INFO  com.revature.models.Book - New Book Created: Crime and Punishment 9
+2020-06-17 13:32:11.586 [main] INFO  com.revature.models.Book - New Book Created: The Return of the King 8
+2020-06-17 13:32:11.586 [main] INFO  com.revature.models.Book - New Book Created: The Winds of Winter 9
